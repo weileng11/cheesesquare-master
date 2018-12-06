@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+	
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+		
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:text="MD控件的使用"
+			android:textSize="18dp"
+			android:textColor="@color/colorAccent"
+			android:gravity="center_horizontal"
+			/>
+		
+		<Button
+			android:id="@+id/button0"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="40dp"
+			android:text="底部滑动"
+			/>
+		
+		<Button
+			android:id="@+id/button1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="drawlayout"
+			/>
+		
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="CradView"
+			/>
+		
+		<Button
+			android:id="@+id/button3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="TextInputLayout"
+			/>
+		
+		<Button
+			android:id="@+id/button4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="组件化带动画跳转"
+			/>
+		
+		<Button
+			android:id="@+id/button5"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="组件化url跳转"
+			/>
+	</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

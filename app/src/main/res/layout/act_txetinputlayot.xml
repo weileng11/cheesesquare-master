@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+	<!-- app:counterEnabled="true" //设置为true才能显字符数
+        app:counterMaxLength="5" //设置最大字符数为5
+        app:counterOverflowTextAppearance="@style/HintError" //设置超出字符数后提示文字的颜色，如果不设置默认为@color/colorAccent的颜色
+-->
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/textView_user"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		app:counterEnabled="true"
+		app:counterMaxLength="5"
+		app:counterOverflowTextAppearance="@style/HintError"
+		>
+		
+		<EditText
+			android:id="@+id/ed_user"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="请输入用户名"
+			/>
+	</android.support.design.widget.TextInputLayout>
+	
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/textView_pwd"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		app:errorEnabled="true"
+		>
+		
+		<EditText
+			android:id="@+id/ed_pwd"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="请输入邮箱"
+			/>
+	</android.support.design.widget.TextInputLayout>
+	
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/textinputlayout_password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		app:errorEnabled="true"
+		app:passwordToggleEnabled="true"
+		>
+		
+		<EditText
+			android:id="@+id/et_password"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="请输入密码"
+			android:inputType="textPassword"
+			/>
+	</android.support.design.widget.TextInputLayout>
+</LinearLayout>
