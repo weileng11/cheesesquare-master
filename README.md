@@ -1,9 +1,9 @@
 ![alt text](https://raw.githubusercontent.com/chrisbanes/cheesesquare/master/art/icon.png)
 
 # Bruce 整改
-# DrawerLayout,CoordinatorLayout,AppBarLayout,Toolbar,TabLayout
-# FloatingActionButton,CollapsingToolbarLayout,NestedScrollView,NestedScrollView
-# SwipeRefreshLayout暂未加入,TextInputLayout
+## DrawerLayout,CoordinatorLayout,AppBarLayout,Toolbar,TabLayout
+## FloatingActionButton,CollapsingToolbarLayout,NestedScrollView,NestedScrollView
+## SwipeRefreshLayout暂未加入,TextInputLayout
 
 Cheesesquare Sample
 ===================================
