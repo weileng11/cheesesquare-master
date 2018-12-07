@@ -27,11 +27,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.*;
+import android.widget.TextView;
+import android.widget.Toast;
 import com.support.android.designlibdemo.R;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,11 +51,40 @@ public class DrawLayoutAct extends AppCompatActivity
 		setContentView(R.layout.drawlayout_main);
 		Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		final ActionBar ab=getSupportActionBar();
-		ab.setHomeAsUpIndicator(R.drawable.ic_menu);
-		ab.setDisplayHomeAsUpEnabled(true);
+		
+		toolbar.inflateMenu(R.menu.menu_icon);
+		//action menu操作菜单按钮的点击事件
+		toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+			@Override
+			public boolean onMenuItemClick(MenuItem item) {
+				switch (item.getItemId()){
+				case R.id.share:
+					Toast.makeText(DrawLayoutAct.this,"分享",Toast.LENGTH_SHORT).show();
+					break;
+				case R.id.setting:
+					Toast.makeText(DrawLayoutAct.this,"设置",Toast.LENGTH_SHORT).show();
+					break;
+				}
+				return false;
+			}
+		});
+		//导航按钮的点击事件
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				//finish();
+			}
+		});
+		
+		
+		//final ActionBar ab=getSupportActionBar();
+		//ab.setHomeAsUpIndicator(R.drawable.ic_menu);
+		//ab.setDisplayHomeAsUpEnabled(true);
 		mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_layout);
 		final NavigationView navigationView=(NavigationView)findViewById(R.id.nav_view);
+		View view=navigationView.inflateHeaderView(R.layout.nav_header);
+		TextView txvhead=view.findViewById(R.id.txv_head);
+		txvhead.setText("只是一个测试");
 		final CoordinatorLayout coordinatorLayout=findViewById(R.id.main_content);
 		mDrawerLayout.addDrawerListener(new DrawerLayout.DrawerListener()
 		{

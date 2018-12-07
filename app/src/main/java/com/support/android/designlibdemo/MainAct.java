@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import com.support.android.designlibdemo.md.Palette.ActPalette;
 import com.support.android.designlibdemo.md.bottomnavigation.BottomNavigationViewAct;
 import com.support.android.designlibdemo.md.cardview.CradViewAct;
+import com.support.android.designlibdemo.md.drawable_collapsingtoolbarlayout.ActToobar;
 import com.support.android.designlibdemo.md.drawable_collapsingtoolbarlayout.DrawLayoutAct;
 import com.support.android.designlibdemo.md.textinputlayout.ActTextInputLayout;
 
@@ -43,7 +45,9 @@ public class MainAct extends AppCompatActivity implements View.OnClickListener
 		}else if (view.getId()==R.id.button3) {
 			startActivity(new Intent(this,ActTextInputLayout.class));
 		}else if (view.getId()==R.id.button4) {
+			startActivity(new Intent(this,ActToobar.class));
 		}else if (view.getId()==R.id.button5) {
+			startActivity(new Intent(this,ActPalette.class));
 		}
 	}
 }

@@ -55,14 +55,14 @@
 			android:id="@+id/button4"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="组件化带动画跳转"
+			android:text="toobar"
 			/>
 		
 		<Button
 			android:id="@+id/button5"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="组件化url跳转"
+			android:text="Palette"
 			/>
 	</LinearLayout>
 </android.support.v4.widget.NestedScrollView>

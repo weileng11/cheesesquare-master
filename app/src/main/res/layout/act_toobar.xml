@@ -33,8 +33,8 @@
 			android:layout_height="?attr/actionBarSize"
 			android:background="?attr/colorPrimary"
 			app:layout_scrollFlags="scroll|enterAlways|snap"
-			app:navigationIcon="@drawable/ic_menu"
 			app:logo="@mipmap/ic_launcher"
+			app:navigationIcon="@drawable/ic_menu"
 			app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
 			app:subtitle="子标题"
 			app:subtitleTextAppearance="@style/AlertDialog.AppCompat"
@@ -42,38 +42,72 @@
 			app:title="标题"
 			app:titleTextColor="@color/colorAccent"
 			>
+			
 			<TextView
+				style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center"
 				android:text="标题"
-				style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+				/>
 		</android.support.v7.widget.Toolbar>
-		
-		<android.support.design.widget.TabLayout
-			android:id="@+id/tabs"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			/>
 	</android.support.design.widget.AppBarLayout>
 	
-	<android.support.v4.view.ViewPager
-		android:id="@+id/viewpager"
+	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		app:layout_behavior="@string/appbar_scrolling_view_behavior"
-		/>
-	<!-- app:fabSize ：FloatingActionButton的大小，有两种赋值分别是 “mini” 和 “normal”，默认是“normal”.
-app:backgroundTint：FloatingActionButton默认正常显示时的背景颜色
-app:elevation ：FloatingActionButton阴影的深度，默认时的阴影
-app:rippleColor：FloatingActionButton点击时的背景颜色
-app:pressedTranslationZ：FloatingActionButton点击时阴影的深度-->
-	<android.support.design.widget.FloatingActionButton
-		android:id="@+id/fab"
-		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_gravity="end|bottom"
-		android:layout_margin="@dimen/fab_margin"
-		android:src="@drawable/ic_done"
-		/>
+		android:layout_marginTop="100dp"
+		android:orientation="vertical"
+		>
+		
+		<com.support.android.designlibdemo.md.drawable_collapsingtoolbarlayout.SimpleToolbar
+			android:id="@+id/simple_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="?attr/colorPrimaryDark"
+			android:fitsSystemWindows="true"
+			android:minHeight="?attr/actionBarSize"
+			app:contentInsetLeft="0dp"
+			app:contentInsetStart="0dp"
+			>
+			
+			<TextView
+				android:id="@+id/txt_left_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:gravity="center"
+				android:singleLine="true"
+				android:text="返回"
+				android:textColor="#ffffff"
+				android:textSize="16sp"
+				android:visibility="visible"
+				/>
+			
+			<TextView
+				android:id="@+id/txt_main_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:singleLine="true"
+				android:text="标题"
+				android:textColor="@android:color/white"
+				android:textSize="20sp"
+				android:visibility="visible"
+				/>
+			
+			<TextView
+				android:id="@+id/txt_right_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:layout_marginRight="10dp"
+				android:drawableRight="@drawable/ic_menu"
+				android:gravity="center"
+				android:textColor="#ffffff"
+				android:textSize="16sp"
+				android:visibility="visible"
+				/>
+		</com.support.android.designlibdemo.md.drawable_collapsingtoolbarlayout.SimpleToolbar>
+	</LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

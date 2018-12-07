@@ -32,9 +32,13 @@
 		    </intent-filter>
 	    </activity>
 	
+	    <activity android:name=".md.Palette.ActPalette">
+	    </activity>
 	    <activity android:name=".md.bottomnavigation.BottomNavigationViewAct">
 	    </activity>
 	    <activity android:name=".md.cardview.CradViewAct">
+	    </activity>
+	    <activity android:name=".md.drawable_collapsingtoolbarlayout.ActToobar">
 	    </activity>
 	    <activity android:name=".md.textinputlayout.ActTextInputLayout">
 	    </activity>
